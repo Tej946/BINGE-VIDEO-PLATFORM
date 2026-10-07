@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Test Player</title>
+</head>
+
+<body style='background:#222; color:#fff;'>
+  <h2>Config 1: Current (nocookie + no-referrer + restricted sandbox)</h2>
+  <iframe id='c1' width='400' height='225' src='https://www.youtube-nocookie.com/embed/M7lc1UVf-VE?enablejsapi=1'
+    referrerpolicy='no-referrer' sandbox='allow-scripts allow-same-origin allow-presentation allow-forms'
+    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+    allowfullscreen></iframe>
+
+  <h2>Config 2: Standard (youtube.com + strict-origin + NO sandbox)</h2>
+  <iframe id='c2' width='400' height='225' src='https://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1'
+    referrerpolicy='strict-origin-when-cross-origin'
+    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+    allowfullscreen></iframe>
+
+  <h2>Config 3: Nocookie + strict-origin + NO sandbox</h2>
+  <iframe id='c3' width='400' height='225' src='https://www.youtube-nocookie.com/embed/M7lc1UVf-VE?enablejsapi=1'
+    referrerpolicy='strict-origin-when-cross-origin'
+    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+    allowfullscreen></iframe>
+
+  <h2>Config 4: Youtube.com + strict-origin + relaxed sandbox (with popups)</h2>
+  <iframe id='c4' width='400' height='225' src='https://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1'
+    referrerpolicy='strict-origin-when-cross-origin'
+    sandbox='allow-scripts allow-same-origin allow-presentation allow-forms allow-popups allow-popups-to-escape-sandbox'
+    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+    allowfullscreen></iframe>
+</body>
+
+</html>
